@@ -14,33 +14,33 @@ User.destroy_all
 
 
 user1 = User.create!(
-  username: "ana_fit",
-  email: "ana@example.com",
-  password: "password123", 
+  username: "sofia_jara",
+  email: "sofia_jara@example.com",
+  password: "sofia123", 
   role: "user",
   badges: 2
 )
 
 user2 = User.create!(
-  username: "carlos_runner",
-  email: "carlos@example.com",
-  password: "password123",
+  username: "ignacio_wiechert",
+  email: "ignacio_wiechert@example.com",
+  password: "ignacio123",
   role: "user",
   badges: 5
 )
 
 user3 = User.create!(
-  username: "admin_pro",
-  email: "admin@example.com",
-  password: "adminpass",
+  username: "antonia_grandon",
+  email: "antonia_grandon@example.com",
+  password: "antonia123",
   role: "admin",
   badges: 10
 )
 
 challenge1 = Challenge.create!(
   goal: "Correr 42 kilómetros en un mes",
-  name: "Reto Maratón Mensual",
-  description: "Acumula kilómetros en cada carrera hasta alcanzar la meta de una maratón.",
+  name: "Reto maratón en un mes",
+  description: "Acumula kilómetros en cada carrera hasta alcanzar la meta de una maratón",
   categories: "Fitness, Running",
   start_date: Date.today,
   end_date: Date.today + 30.days,
@@ -48,10 +48,10 @@ challenge1 = Challenge.create!(
 )
 
 challenge2 = Challenge.create!(
-  goal: "Leer 3 libros en 30 días",
-  name: "Club de Lectura Intensivo",
-  description: "Expande tu mente y devora tres libros de tu elección este mes.",
-  categories: "Educación, Desarrollo Personal",
+  goal: "Correr 21 kilómetros en medio mes",
+  name: "Reto media maratón en medio mes",
+  description: "Acumula kilómetros en cada carrera hasta alcanzar la meta de una media maratón",
+  categories: "Fitness, Running",
   start_date: Date.today - 15.days,
   end_date: Date.today + 15.days,
   user: user1
