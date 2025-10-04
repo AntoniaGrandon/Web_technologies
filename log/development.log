@@ -11141,3 +11141,503 @@ Processing by ProgressesController#index as HTML
 Completed 200 OK in 115ms (Views: 62.8ms | ActiveRecord: 7.2ms (9 queries, 3 cached) | GC: 10.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-10-04 11:13:54 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Assignment'*/[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 39.3ms | GC: 3.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 174.7ms | GC: 3.3ms)
+Completed 200 OK in 293ms (Views: 191.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.2ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2025-10-04 11:14:30 -0300
+Processing by ChallengesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering challenges/index.html.erb within layouts/application
+  [1m[36mChallenge Load (29.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='Assignment',controller='challenges'*/[0m
+  ↳ app/views/challenges/index.html.erb:36
+  Rendered challenges/index.html.erb within layouts/application (Duration: 153.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 216.1ms | GC: 17.3ms)
+Completed 200 OK in 296ms (Views: 89.2ms | ActiveRecord: 128.9ms (1 query, 0 cached) | GC: 18.8ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2025-10-04 11:14:38 -0300
+Processing by ChallengesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering challenges/index.html.erb within layouts/application
+  [1m[36mChallenge Load (2.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='Assignment',controller='challenges'*/[0m
+  ↳ app/views/challenges/index.html.erb:36
+  Rendered challenges/index.html.erb within layouts/application (Duration: 27.9ms | GC: 7.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | GC: 7.8ms)
+Completed 200 OK in 87ms (Views: 34.9ms | ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 7.8ms)
+
+
+Started GET "/challenges/4" for 127.0.0.1 at 2025-10-04 11:14:41 -0300
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mChallenge Load (2.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='show',application='Assignment',controller='challenges'*/[0m
+  ↳ app/controllers/challenges_controller.rb:63:in `set_challenge'
+  Rendering layout layouts/application.html.erb
+  Rendering challenges/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1 /*action='show',application='Assignment',controller='challenges'*/[0m
+  ↳ app/views/challenges/show.html.erb:36
+  Rendered challenges/show.html.erb within layouts/application (Duration: 81.1ms | GC: 8.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 83.6ms | GC: 8.6ms)
+Completed 200 OK in 150ms (Views: 71.8ms | ActiveRecord: 15.7ms (2 queries, 0 cached) | GC: 12.3ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2025-10-04 11:14:47 -0300
+Processing by ChallengesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering challenges/index.html.erb within layouts/application
+  [1m[36mChallenge Load (1.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='Assignment',controller='challenges'*/[0m
+  ↳ app/views/challenges/index.html.erb:36
+  Rendered challenges/index.html.erb within layouts/application (Duration: 9.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | GC: 0.0ms)
+Completed 200 OK in 60ms (Views: 13.8ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2025-10-04 11:14:50 -0300
+Processing by ChallengesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering challenges/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='Assignment',controller='challenges'*/[0m
+  ↳ app/views/challenges/_form.html.erb:46
+  Rendered challenges/_form.html.erb (Duration: 26.2ms | GC: 1.1ms)
+  Rendered challenges/new.html.erb within layouts/application (Duration: 30.1ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | GC: 1.1ms)
+Completed 200 OK in 72ms (Views: 34.3ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/challenges/new" for 127.0.0.1 at 2025-10-04 11:14:52 -0300
+Processing by ChallengesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering challenges/new.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='Assignment',controller='challenges'*/[0m
+  ↳ app/views/challenges/_form.html.erb:46
+  Rendered challenges/_form.html.erb (Duration: 12.0ms | GC: 0.0ms)
+  Rendered challenges/new.html.erb within layouts/application (Duration: 14.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 17.5ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2025-10-04 11:15:03 -0300
+Processing by ChallengesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering challenges/index.html.erb within layouts/application
+  [1m[36mChallenge Load (0.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='Assignment',controller='challenges'*/[0m
+  ↳ app/views/challenges/index.html.erb:36
+  Rendered challenges/index.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 7.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/progresses" for 127.0.0.1 at 2025-10-04 11:15:05 -0300
+Processing by ProgressesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering progresses/index.html.erb within layouts/application
+  [1m[36mProgress Load (1.7ms)[0m  [1m[34mSELECT "progresses".* FROM "progresses" /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:36
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mCACHE Challenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  Rendered progresses/index.html.erb within layouts/application (Duration: 116.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 121.7ms | GC: 0.0ms)
+Completed 200 OK in 176ms (Views: 107.6ms | ActiveRecord: 16.9ms (9 queries, 3 cached) | GC: 0.0ms)
+
+
+Started GET "/progresses/5" for 127.0.0.1 at 2025-10-04 11:15:07 -0300
+Processing by ProgressesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProgress Load (1.4ms)[0m  [1m[34mSELECT "progresses".* FROM "progresses" WHERE "progresses"."id" = 5 LIMIT 1 /*action='show',application='Assignment',controller='progresses'*/[0m
+  ↳ app/controllers/progresses_controller.rb:63:in `set_progress'
+  Rendering layout layouts/application.html.erb
+  Rendering progresses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='show',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/show.html.erb:31
+  [1m[36mChallenge Load (1.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='show',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/show.html.erb:33
+  Rendered progresses/show.html.erb within layouts/application (Duration: 20.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | GC: 0.0ms)
+Completed 200 OK in 79ms (Views: 22.8ms | ActiveRecord: 3.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:15:09 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 7.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 51ms (Views: 12.4ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/progresses/5" for 127.0.0.1 at 2025-10-04 11:15:09 -0300
+Processing by ProgressesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProgress Load (1.1ms)[0m  [1m[34mSELECT "progresses".* FROM "progresses" WHERE "progresses"."id" = 5 LIMIT 1 /*action='show',application='Assignment',controller='progresses'*/[0m
+  ↳ app/controllers/progresses_controller.rb:63:in `set_progress'
+  Rendering layout layouts/application.html.erb
+  Rendering progresses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='show',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/show.html.erb:31
+  [1m[36mChallenge Load (1.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='show',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/show.html.erb:33
+  Rendered progresses/show.html.erb within layouts/application (Duration: 17.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | GC: 0.0ms)
+Completed 200 OK in 65ms (Views: 18.6ms | ActiveRecord: 3.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/progresses/new" for 127.0.0.1 at 2025-10-04 11:15:16 -0300
+Processing by ProgressesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering progresses/new.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/_form.html.erb:16
+  [1m[36mChallenge Load (1.9ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='new',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/_form.html.erb:23
+  Rendered progresses/_form.html.erb (Duration: 35.6ms | GC: 0.0ms)
+  Rendered progresses/new.html.erb within layouts/application (Duration: 41.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | GC: 0.0ms)
+Completed 200 OK in 101ms (Views: 43.6ms | ActiveRecord: 2.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/progresses" for 127.0.0.1 at 2025-10-04 11:15:24 -0300
+Processing by ProgressesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering progresses/index.html.erb within layouts/application
+  [1m[36mProgress Load (1.0ms)[0m  [1m[34mSELECT "progresses".* FROM "progresses" /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:36
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (0.8ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mCACHE Challenge Load (0.0ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (0.9ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  Rendered progresses/index.html.erb within layouts/application (Duration: 61.5ms | GC: 13.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.4ms | GC: 13.2ms)
+Completed 200 OK in 107ms (Views: 58.9ms | ActiveRecord: 5.7ms (9 queries, 3 cached) | GC: 13.2ms)
+
+
+Started GET "/progresses/5" for 127.0.0.1 at 2025-10-04 11:15:26 -0300
+Processing by ProgressesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProgress Load (2.1ms)[0m  [1m[34mSELECT "progresses".* FROM "progresses" WHERE "progresses"."id" = 5 LIMIT 1 /*action='show',application='Assignment',controller='progresses'*/[0m
+  ↳ app/controllers/progresses_controller.rb:63:in `set_progress'
+  Rendering layout layouts/application.html.erb
+  Rendering progresses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='show',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/show.html.erb:31
+  [1m[36mChallenge Load (1.6ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='show',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/show.html.erb:33
+  Rendered progresses/show.html.erb within layouts/application (Duration: 19.3ms | GC: 1.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | GC: 1.9ms)
+Completed 200 OK in 80ms (Views: 23.1ms | ActiveRecord: 4.8ms (3 queries, 0 cached) | GC: 1.9ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2025-10-04 11:15:30 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='show',application='Assignment',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 7.9ms | ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/challenges/4" for 127.0.0.1 at 2025-10-04 11:15:33 -0300
+Processing by ChallengesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mChallenge Load (2.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='show',application='Assignment',controller='challenges'*/[0m
+  ↳ app/controllers/challenges_controller.rb:63:in `set_challenge'
+  Rendering layout layouts/application.html.erb
+  Rendering challenges/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1 /*action='show',application='Assignment',controller='challenges'*/[0m
+  ↳ app/views/challenges/show.html.erb:36
+  Rendered challenges/show.html.erb within layouts/application (Duration: 12.0ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | GC: 0.9ms)
+Completed 200 OK in 70ms (Views: 16.0ms | ActiveRecord: 3.0ms (2 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/progresses" for 127.0.0.1 at 2025-10-04 11:15:46 -0300
+Processing by ProgressesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering progresses/index.html.erb within layouts/application
+  [1m[36mProgress Load (2.1ms)[0m  [1m[34mSELECT "progresses".* FROM "progresses" /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:36
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.8ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mCACHE Challenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.9ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  Rendered progresses/index.html.erb within layouts/application (Duration: 90.8ms | GC: 3.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 97.3ms | GC: 3.3ms)
+Completed 200 OK in 150ms (Views: 90.0ms | ActiveRecord: 10.3ms (9 queries, 3 cached) | GC: 3.3ms)
+
+
+Started GET "/progresses" for 127.0.0.1 at 2025-10-04 11:15:46 -0300
+Processing by ProgressesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering progresses/index.html.erb within layouts/application
+  [1m[36mProgress Load (1.2ms)[0m  [1m[34mSELECT "progresses".* FROM "progresses" /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:36
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mCACHE Challenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  Rendered progresses/index.html.erb within layouts/application (Duration: 63.8ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | GC: 0.9ms)
+Completed 200 OK in 122ms (Views: 61.4ms | ActiveRecord: 7.9ms (9 queries, 3 cached) | GC: 2.0ms)
+
+
+Started GET "/progresses" for 127.0.0.1 at 2025-10-04 11:15:46 -0300
+Processing by ProgressesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering progresses/index.html.erb within layouts/application
+  [1m[36mProgress Load (1.0ms)[0m  [1m[34mSELECT "progresses".* FROM "progresses" /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:36
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mCACHE Challenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 4 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+  ↳ app/views/progresses/index.html.erb:37
+  [1m[36mChallenge Load (1.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6 LIMIT 1 /*action='index',application='Assignment',controller='progresses'*/[0m
+  ↳ app/views/progresses/index.html.erb:38
+  Rendered progresses/index.html.erb within layouts/application (Duration: 58.4ms | GC: 2.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | GC: 2.6ms)
+Completed 200 OK in 110ms (Views: 55.8ms | ActiveRecord: 6.9ms (9 queries, 3 cached) | GC: 2.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:15:49 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 8.8ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | GC: 1.1ms)
+Completed 200 OK in 62ms (Views: 12.8ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2025-10-04 11:15:52 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='show',application='Assignment',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.0ms)
+Completed 200 OK in 55ms (Views: 7.4ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2025-10-04 11:15:54 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='show',application='Assignment',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 58ms (Views: 6.5ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:15:59 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 8.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | GC: 0.0ms)
+Completed 200 OK in 57ms (Views: 11.0ms | ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2025-10-04 11:16:01 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 11.6ms | GC: 0.0ms)
+  Rendered users/new.html.erb within layouts/application (Duration: 17.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | GC: 0.0ms)
+Completed 200 OK in 76ms (Views: 24.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:16:02 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 9.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 13.8ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:16:06 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 7.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | GC: 0.0ms)
+Completed 200 OK in 55ms (Views: 10.1ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:16:07 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 17.5ms | GC: 9.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | GC: 9.8ms)
+Completed 200 OK in 66ms (Views: 21.4ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 9.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:16:10 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 6.8ms | GC: 1.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | GC: 1.6ms)
+Completed 200 OK in 50ms (Views: 9.3ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:16:11 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 6.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 2.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2025-10-04 11:16:12 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 8.3ms | GC: 0.0ms)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | GC: 0.0ms)
+Completed 200 OK in 87ms (Views: 20.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2025-10-04 11:16:13 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.0ms | GC: 0.5ms)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.7ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.5ms)
+Completed 200 OK in 51ms (Views: 10.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/challenges" for 127.0.0.1 at 2025-10-04 11:16:33 -0300
+Processing by ChallengesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering challenges/index.html.erb within layouts/application
+  [1m[36mChallenge Load (1.8ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /*action='index',application='Assignment',controller='challenges'*/[0m
+  ↳ app/views/challenges/index.html.erb:36
+  Rendered challenges/index.html.erb within layouts/application (Duration: 45.7ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | GC: 1.3ms)
+Completed 200 OK in 107ms (Views: 41.8ms | ActiveRecord: 13.5ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:16:35 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 34.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | GC: 0.0ms)
+Completed 200 OK in 78ms (Views: 28.4ms | ActiveRecord: 10.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2025-10-04 11:16:36 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 7.8ms | GC: 0.0ms)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.0ms)
+Completed 200 OK in 61ms (Views: 15.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-10-04 11:16:37 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Assignment',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 7.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
