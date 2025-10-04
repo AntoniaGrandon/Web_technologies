@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "pages/home"
   resources :progresses
   resources :challenges
   resources :users
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  root "users#index"
+  root "pages#index"
   resources :progress
   resources :challenges
   resources :users

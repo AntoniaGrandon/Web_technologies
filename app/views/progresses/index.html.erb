@@ -1,16 +1,47 @@
-<p style="color: green"><%= notice %></p>
+<body class="bg-dark text-white">
+  <%= yield %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+      <%= link_to "Fitness Tracker", root_path, class: "navbar-brand fw-bold" %>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <%= link_to "Challenges", challenges_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+          <%= link_to "Progresses", progresses_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+          <%= link_to "Users", users_path, class: "nav-link" %>
+          </li>
+      </ul>
+      </div>
+  </div>
+  </nav>
 
-<% content_for :title, "Progresses" %>
+  <p style="color: green"><%= notice %></p>
 
-<h1>Progresses</h1>
+  <% content_for :title, "Progresses" %>
 
-<div id="progresses">
-  <% @progresses.each do |progress| %>
-    <%= render progress %>
-    <p>
-      <%= link_to "Show this progress", progress %>
-    </p>
-  <% end %>
-</div>
+  <h1 style="color: cyan"><strong>Progresses</strong></h1>
 
-<%= link_to "New progress", new_progress_path %>
+  <hr>
+
+  <div id="progresses">
+    <% @progresses.each do |progress| %>
+      <p><strong>User:</strong> <%= progress.user.username %></p>
+      <p><strong>Challenge:</strong> <%= progress.challenge.name %></p>
+      <p>
+        <%= link_to "Show this progress", progress, style: "color: cyan" %>
+      </p>
+      <hr>
+    <% end %>
+  </div>
+
+  <%= link_to "New progress", new_progress_path,  class: "btn btn-secondary" %>
+</body>

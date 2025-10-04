@@ -23,7 +23,7 @@
 
   <div>
     <%= form.label :description, style: "display: block" %>
-    <%= form.textarea :description %>
+    <%= form.text_area :description %>
   </div>
 
   <div>
@@ -41,12 +41,15 @@
     <%= form.date_field :end_date %>
   </div>
 
-  <div>
-    <%= form.label :creator_id, style: "display: block" %>
-    <%= form.text_field :creator_id %>
+  <div class="mb-3">
+    <%= form.label :creator_id, "Select Creator", class: "form-label" %>
+    <%= form.collection_select :creator_id, User.all, :id, :username,
+          { prompt: "Choose a user" },
+          { class: "form-select" } %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mt-3">
+    <%= form.submit "Create Challenge", class: "btn btn-secondary" %>
   </div>
+
 <% end %>
