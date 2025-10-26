@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_01_235943) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_26_210447) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -18,7 +18,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_01_235943) do
     t.string "goal"
     t.string "name"
     t.text "description"
-    t.string "categories"
+    t.integer "categories", default: 0, null: false
     t.date "start_date"
     t.date "end_date"
     t.bigint "user_id", null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_01_235943) do
     t.bigint "user_id", null: false
     t.bigint "challenge_id", null: false
     t.integer "points_earned"
-    t.string "update_frequency"
+    t.integer "update_frequency", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["challenge_id"], name: "index_progresses_on_challenge_id"
@@ -42,7 +42,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_01_235943) do
     t.string "username"
     t.string "email"
     t.string "password"
-    t.string "role"
+    t.integer "role", default: 0, null: false
     t.integer "badges"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

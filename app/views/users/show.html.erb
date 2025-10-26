@@ -24,7 +24,11 @@
   </div>
   </nav>
 
-  <p style="color: green"><%= notice %></p>
+  <% if notice %>
+    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
 
   <h1><strong><%= @user.username %></strong></h1>
   <p><strong>Email: </strong><%= @user.email %><p>
@@ -37,6 +41,6 @@
     <%= link_to "Back to users", users_path  %>
 
     <br>
-    <%= link_to "Destroy this user", @user, class: "btn btn-secondary", method: :delete %>
+    <%= button_to "Destroy this user", @user, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-secondary" %>
   </div>
 </body>

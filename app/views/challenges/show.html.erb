@@ -24,7 +24,11 @@
   </div>
   </nav>
 
-  <p style="color: green"><%= notice %></p>
+  <% if notice %>
+    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
 
   <div>
     <h1><strong><%= @challenge.name %></strong></h1>
@@ -40,6 +44,7 @@
     <%= link_to "Edit this challenge", edit_challenge_path(@challenge), style: "color: orange" %> |
     <%= link_to "Back to challenges", challenges_path, style: "color: orange" %>
     <br>
-    <%= link_to "Destroy this challenge", @challenge,  class: "btn btn-secondary", method: :delete%>
+
+    <%= button_to "Destroy this challenge", @challenge, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-secondary" %>
   </div>
 </body>

@@ -24,7 +24,11 @@
   </div>
   </nav>
 
-  <p style="color: green"><%= notice %></p>
+  <% if notice %>
+    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
 
   <h1><strong>
     Progress of
@@ -40,6 +44,6 @@
     <%= link_to "Edit this progress", edit_progress_path(@progress), style: "color: cyan" %> |
     <%= link_to "Back to progresses", progresses_path, style: "color: cyan" %>
     <br>
-    <%= link_to "Destroy this progress", @progress,  class: "btn btn-secondary", method: :delete %>
+    <%= button_to "Destroy this progress", @progress, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-secondary" %>
   </div>
 </body>

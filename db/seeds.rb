@@ -17,7 +17,7 @@ user1 = User.create!(
   username: "sofia_jara",
   email: "sofia_jara@example.com",
   password: "sofia123", 
-  role: "user",
+  role: 1,
   badges: 2
 )
 
@@ -25,7 +25,7 @@ user2 = User.create!(
   username: "ignacio_wiechert",
   email: "ignacio_wiechert@example.com",
   password: "ignacio123",
-  role: "user",
+  role: 0,
   badges: 5
 )
 
@@ -33,7 +33,7 @@ user3 = User.create!(
   username: "antonia_grandon",
   email: "antonia_grandon@example.com",
   password: "antonia123",
-  role: "admin",
+  role: 2,
   badges: 10
 )
 
@@ -41,7 +41,7 @@ challenge1 = Challenge.create!(
   goal: "Run 42 kilometers in one month",
   name: "Marathon in a Month Challenge",
   description: "Accumulate kilometers in each run until you reach the marathon goal",
-  categories: "Fitness, Running",
+  categories: 1,
   start_date: Date.today,
   end_date: Date.today + 30.days,
   user: user3 
@@ -51,7 +51,7 @@ challenge2 = Challenge.create!(
   goal: "Run 21 kilometers in half a month",
   name: "Half Marathon in Half a Month Challenge",
   description: "Accumulate kilometers in each run until you reach the half-marathon goal",
-  categories: "Fitness, Running",
+  categories: 2,
   start_date: Date.today - 15.days,
   end_date: Date.today + 15.days,
   user: user1
@@ -61,7 +61,7 @@ challenge3 = Challenge.create!(
   goal: "Drink 2 liters of water per day",
   name: "Total Hydration",
   description: "A simple challenge to improve your health and overall well-being.",
-  categories: "Health, Wellness",
+  categories: 4,
   start_date: Date.today,
   end_date: Date.today + 7.days,
   user: user2
@@ -71,26 +71,26 @@ Progress.create!(
   user: user1,
   challenge: challenge1,
   points_earned: 15,
-  update_frequency: "Daily"
+  update_frequency: 2
 )
 
 Progress.create!(
   user: user2,
   challenge: challenge1,
   points_earned: 35,
-  update_frequency: "Daily"
+  update_frequency: 0
 )
 
 Progress.create!(
   user: user1,
   challenge: challenge2,
   points_earned: 2,
-  update_frequency: "Weekly"
+  update_frequency: 1
 )
 
 Progress.create!(
   user: user2,
   challenge: challenge3,
   points_earned: 7,
-  update_frequency: "Daily"
+  update_frequency: 0
 )

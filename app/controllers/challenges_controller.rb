@@ -58,13 +58,11 @@ class ChallengesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_challenge
-      @challenge = Challenge.find(params.expect(:id))
+      @challenge = Challenge.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def challenge_params
-      params.expect(challenge: [ :goal, :name, :description, :categories, :start_date, :end_date, :creator_id ])
+      params.require(:challenge).permit(:goal, :name, :description, :categories, :start_date, :end_date, :user_id)
     end
 end

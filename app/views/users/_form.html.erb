@@ -1,9 +1,11 @@
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading">
+        <%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:
+      </h4>
 
-      <ul>
+      <ul class="mb-0">
         <% user.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
@@ -28,7 +30,7 @@
 
   <div>
     <%= form.label :role, style: "display: block" %>
-    <%= form.text_field :role %>
+    <%= form.select :role, User.roles.keys.map { |r| [r.humanize, r] }, prompt: "Choose a role" %>
   </div>
 
   <div>
