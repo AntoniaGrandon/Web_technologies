@@ -1,6 +1,13 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   has_many :challenges, dependent: :destroy
   has_many :progresses, dependent: :destroy
+
+  # Set sensible defaults so Devise registration works without extra fields in the form
+  before_validation :set_defaults, on: :create
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
@@ -13,5 +20,12 @@ class User < ApplicationRecord
     creator: 1,
     admin: 2
   }, prefix: true
+
+  private
+  #si agrego un usuario, queda con rol user y 0 badges
+  def set_defaults
+    self.role ||= :user
+    self.badges ||= 0
+  end
 
 end

@@ -1,4 +1,5 @@
 class ChallengesController < ApplicationController
+  before_action :authenticate_user!, except: %i[index show]
   before_action :set_challenge, only: %i[ show edit update destroy ]
 
   # GET /challenges or /challenges.json
