@@ -33,7 +33,7 @@ user3 = User.create!(
   username: "antonia_grandon",
   email: "antonia_grandon@example.com",
   password: "antonia123",
-  role: 2,
+  role: 1,
   badges: 10
 )
 

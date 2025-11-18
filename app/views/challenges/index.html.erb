@@ -1,29 +1,4 @@
 <body class="bg-dark text-white">
-  <%= yield %>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-      <%= link_to "Fitness Tracker", root_path, class: "navbar-brand fw-bold" %>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-          <%= link_to "Challenges", challenges_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-          <%= link_to "Progresses", progresses_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-          <%= link_to "Users", users_path, class: "nav-link" %>
-          </li>
-      </ul>
-      </div>
-  </div>
-  </nav>
-
   <% if notice %>
     <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
       <%= notice %>
@@ -32,20 +7,23 @@
 
   <% content_for :title, "Challenges"%>
 
-  <h1 style="color: orange"><strong>Challenges</strong></h1>
+  <h1 class="mb-1 text-warning"><strong>Challenges</strong></h1>
 
   <hr>
 
   <div id="challenges">
-    <% @challenges.each do |challenge| %>
-      <p><strong>Name:</strong> <%= challenge.name %></p>
-      <p><strong>Goal:</strong> <%= challenge.goal %></p>
-      <p>
-        <%= link_to "Show this challenge", challenge, style: "color: orange" %>
-      </p>
-      <hr>
-    <% end %>
+      <% @challenges.each do |challenge| %>
+        <%= link_to challenge, class: "d-block text-white bg-dark border border-warning rounded p-3 mb-4 text-decoration-none" do %>
+          <h5 class="mb-1 text-warning"><%= challenge.name %></h5>
+          <p class="mb-1">
+            <strong class="text-secondary">Goal:</strong> 
+            <%= challenge.goal %>
+          </p>
+        <% end %>
+      <% end %>
   </div>
-
-  <%= link_to "New challenge", new_challenge_path, class: "btn btn-secondary"%>
+    
+  <% if can? :create, Challenge %>
+    <%= link_to "New challenge", new_challenge_path, class: "btn btn-secondary"%>
+  <% end %>
 </body>

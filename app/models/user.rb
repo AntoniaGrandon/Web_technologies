@@ -17,9 +17,12 @@ class User < ApplicationRecord
 
   enum :role, {
     user: 0,
-    creator: 1,
-    admin: 2
+    admin: 1
   }, prefix: true
+
+  def admin?
+    self.role == 'admin' 
+  end
 
   private
   #si agrego un usuario, queda con rol user y 0 badges

@@ -1,28 +1,4 @@
 <body class="bg-dark text-white">
-  <%= yield %>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-      <%= link_to "Fitness Tracker", root_path, class: "navbar-brand fw-bold" %>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-          <%= link_to "Challenges", challenges_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-          <%= link_to "Progresses", progresses_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-          <%= link_to "Users", users_path, class: "nav-link" %>
-          </li>
-      </ul>
-      </div>
-  </div>
-  </nav>
 
   <% if notice %>
     <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
@@ -38,13 +14,12 @@
 
   <div id="users">
     <% @users.each do |user| %>
-      <p><strong>Username: </strong><%= user.username %><p>
-      <p>
-        <%= link_to "Show this user", user %>
-        <hr>
-      </p>
+      <%= link_to user, class: "d-block text-white bg-dark border border-primary rounded p-3 mb-3 text-decoration-none" do %>
+        <h5 class="mb-1 text-primary"><%= user.username %></h5>
+        <p class="mb-1">
+          <strong>Badges: </strong><%= user.badges %>
+        </p>
+      <% end %>
     <% end %>
   </div>
-
-  <%= link_to "New user", new_user_path, class: "btn btn-secondary" %>
 </body>
